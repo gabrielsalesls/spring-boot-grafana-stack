@@ -1,7 +1,7 @@
 package dev.gabrielsales.carinfo.service;
 
 import dev.gabrielsales.carinfo.dto.CarDto;
-import dev.gabrielsales.carinfo.model.Car;
+import dev.gabrielsales.carinfo.model.CarInfo;
 import dev.gabrielsales.carinfo.repository.CarRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +17,17 @@ public class CarService {
     }
 
     public List<CarDto> getAllCars() {
-        List<Car> cars = repository.findAll();
+        List<CarInfo> carInfos = repository.findAll();
 
-        return cars.stream().map(Car::toDto).toList();
+        return carInfos.stream().map(CarInfo::toDto).toList();
 
     }
+
+    public List<CarDto> getCarByBrandAndModel(String brand, String model) {
+        List<CarInfo> carInfos = repository.findCarByBrandAndModel(brand, model);
+
+        return carInfos.stream().map(CarInfo::toDto).toList();
+
+    }
+
 }

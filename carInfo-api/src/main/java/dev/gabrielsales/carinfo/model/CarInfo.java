@@ -7,7 +7,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "car_info")
-public class Car {
+public class CarInfo {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -22,10 +22,10 @@ public class Car {
 
     private String color;
 
-    public Car() {
+    public CarInfo() {
     }
 
-    public Car(String brand, String model, Integer year, String color) {
+    public CarInfo(String brand, String model, Integer year, String color) {
         this.brand = brand;
         this.model = model;
         this.year = year;

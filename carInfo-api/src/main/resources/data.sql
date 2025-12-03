@@ -1,5 +1,6 @@
 INSERT INTO car_info (brand, model, manufacture_year, color) VALUES
 ('Toyota', 'Corolla', 2020, 'Silver'),
+('Toyota', 'Corolla', 2017, 'Red'),
 ('Honda', 'Civic', 2019, 'Black'),
 ('Ford', 'Fiesta', 2018, 'White'),
 ('Chevrolet', 'Onix', 2021, 'Red'),
