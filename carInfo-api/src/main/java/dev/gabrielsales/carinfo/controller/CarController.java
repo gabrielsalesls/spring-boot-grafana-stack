@@ -24,7 +24,7 @@ public class CarController {
         return carService.getAllCars();
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<CarDto> getCarByBrandAndModel(
             @RequestParam("brand") String brand,
             @RequestParam("model") String model){
