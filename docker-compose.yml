@@ -11,6 +11,8 @@ volumes:
 services:
   prometheus:
     image: prom/prometheus:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus_data:/prometheus
