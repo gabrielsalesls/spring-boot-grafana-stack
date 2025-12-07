@@ -1,0 +1,21 @@
+meta {
+  name: Get Cars by Brand and Model
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8081/api/v1/car-info?brand=Honda&model=Civic
+  body: none
+  auth: inherit
+}
+
+params:query {
+  brand: Honda
+  model: Civic
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

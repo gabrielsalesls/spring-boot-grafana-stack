@@ -1,0 +1,16 @@
+meta {
+  name: Get All Cars
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8081/api/v1/car-info/all
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
